@@ -1,3 +1,3 @@
 ## 1.0.0
 
-- Initial version.
++ JSON RPC v1 and v2 clients

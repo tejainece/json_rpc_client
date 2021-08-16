@@ -1,13 +1,14 @@
 name: json_rpc_client
-description: A starting point for Dart libraries or applications.
+description: Dart library to write JSON RPC v1 and v2 clients
 version: 1.0.0
 # homepage: https://www.example.com
+repository: https://github.com/tejainece/json_rpc_client
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
-  http: 
+  http: ^0.13.3
 
 dev_dependencies:
   pedantic: ^1.10.0

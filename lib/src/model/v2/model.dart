@@ -62,11 +62,11 @@ class JRPC2Response {
       );
 }
 
-class JRPCError {
+class JRPC2Error {
   final int code;
   final String message;
   final Object? data;
-  JRPCError(this.code, this.message, {this.data});
+  JRPC2Error(this.code, this.message, {this.data});
 
   Map<String, dynamic> toJson() {
     final ret = <String, dynamic>{'code': code, 'message': message};
@@ -76,6 +76,6 @@ class JRPCError {
     return {'code': code, 'message': message};
   }
 
-  static JRPCError fromMap(Map<String, dynamic> map) =>
-      JRPCError(map['code'], map['message'], data: map['data']);
+  static JRPC2Error fromMap(Map<String, dynamic> map) =>
+      JRPC2Error(map['code'], map['message'], data: map['data']);
 }

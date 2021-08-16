@@ -55,11 +55,11 @@ class JRPC1Response {
   }
 
   static JRPC1Response fromMap(Map<String, dynamic> map) => JRPC1Response(
-    jsonrpc: map['jsonrpc'] ?? '1.0',
-    id: map['id'],
-    result: map['result'],
-    error: map['error'],
-  );
+        jsonrpc: map['jsonrpc'] ?? '1.0',
+        id: map['id'],
+        result: map['result'],
+        error: map['error'],
+      );
 }
 
 class JRPC1Error {

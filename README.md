@@ -1,19 +1,14 @@
-A library for Dart developers.
+# json_rpc_client
 
-## Usage
+A very simple Dart library to write JSON RPC v1 and v2 clients.
 
-A simple usage example:
+# Features
+
++ Supports both V1 and V2
++ Supports Basic auth for JSON RPC over HTTP
+
+# Example
 
 ```dart
-import 'package:json_rpc_client/json_rpc_client.dart';
 
-main() {
-  var awesome = new Awesome();
-}
 ```
-
-## Features and bugs
-
-Please file feature requests and bugs at the [issue tracker][tracker].
-
-[tracker]: http://example.com/issues/replaceme
