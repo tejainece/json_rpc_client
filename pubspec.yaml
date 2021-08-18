@@ -1,6 +1,6 @@
 name: json_rpc_client
 description: Dart library to write JSON RPC v1 and v2 clients
-version: 1.0.1
+version: 1.0.2
 repository: https://github.com/tejainece/json_rpc_client
 
 environment:

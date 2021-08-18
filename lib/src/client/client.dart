@@ -5,6 +5,8 @@ export 'http.dart';
 
 abstract class JRPCClient {
   String get nextId;
-  Future<JRPC1Response> callRPCv1(JRPC1Request req);
-  Future<JRPC2Response> callRPCv2(JRPC2Request req);
+  Future<JRPC1Response> callRPCv1(JRPC1Request req,
+      {String? pathSuffix, Uri? uri});
+  Future<JRPC2Response> callRPCv2(JRPC2Request req,
+      {String? pathSuffix, Uri? uri});
 }

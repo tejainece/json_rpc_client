@@ -27,8 +27,8 @@ class JRPCHttpClient implements JRPCClient {
 
   @override
   Future<JRPC1Response> callRPCv1(JRPC1Request req,
-      {String? pathSuffix}) async {
-    Uri uri = this.uri;
+      {String? pathSuffix, Uri? uri}) async {
+    uri ??= this.uri;
     if (pathSuffix != null) {
       uri = uri.replace(path: uri.path + pathSuffix);
     }
@@ -46,8 +46,8 @@ class JRPCHttpClient implements JRPCClient {
 
   @override
   Future<JRPC2Response> callRPCv2(JRPC2Request req,
-      {String? pathSuffix}) async {
-    Uri uri = this.uri;
+      {String? pathSuffix, Uri? uri}) async {
+    uri ??= this.uri;
     if (pathSuffix != null) {
       uri = uri.replace(path: uri.path + pathSuffix);
     }
