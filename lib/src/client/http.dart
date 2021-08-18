@@ -26,7 +26,12 @@ class JRPCHttpClient implements JRPCClient {
   }
 
   @override
-  Future<JRPC1Response> callRPCv1(JRPC1Request req) async {
+  Future<JRPC1Response> callRPCv1(JRPC1Request req,
+      {String? pathSuffix}) async {
+    Uri uri = this.uri;
+    if (pathSuffix != null) {
+      uri = uri.replace(path: uri.path + pathSuffix);
+    }
     final body = json.encode(req.toJson());
     final headers = {
       HttpHeaders.contentTypeHeader: 'application/json-rpc',
@@ -40,7 +45,12 @@ class JRPCHttpClient implements JRPCClient {
   }
 
   @override
-  Future<JRPC2Response> callRPCv2(JRPC2Request req) async {
+  Future<JRPC2Response> callRPCv2(JRPC2Request req,
+      {String? pathSuffix}) async {
+    Uri uri = this.uri;
+    if (pathSuffix != null) {
+      uri = uri.replace(path: uri.path + pathSuffix);
+    }
     final body = json.encode(req.toJson());
     final headers = {
       HttpHeaders.contentTypeHeader: 'application/json-rpc',
